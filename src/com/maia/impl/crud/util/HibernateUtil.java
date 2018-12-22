@@ -1,8 +1,6 @@
 package com.maia.impl.crud.util;
 
 import java.io.Serializable;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -11,7 +9,6 @@ import javax.sql.DataSource;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.engine.spi.SessionFactoryImplementor;
 
 /*
  * Responsavel por estabelecer a conexão com o Hibernate
@@ -55,12 +52,6 @@ public class HibernateUtil implements Serializable {
 			buildSessionFactory();
 		}
 		return sessionFactory.openSession();
-	}
-
-	/* Obtem a conection do provedor de conexões configurado. */
-	@SuppressWarnings("deprecation")
-	public static Connection getConnectionProvider() throws SQLException {
-		return ((SessionFactoryImplementor) sessionFactory).getConnectionProvider().getConnection();
 	}
 
 	/* retorna um DataSource JNDI Tomcat */
