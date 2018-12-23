@@ -13,7 +13,7 @@ public interface GenericCrud<E> extends Serializable {
 	/* Salvar */
 	void save(E obj) throws Exception;
 
-	/* Salvar ou Atualiza */
+	/* Salvar ou Atualiza sem Retornar do Dados do Obj */
 	void SaveOrUpdate(E obj) throws Exception;
 
 	/* Atualiza os Dados */
@@ -34,11 +34,14 @@ public interface GenericCrud<E> extends Serializable {
 	/* Retonar uma Lista de Qualquer Objeto com SQL - Dinamicamente */
 	List<?> getListSQLDinamica(String sql) throws Exception;
 
-	/* Faz um consulta dinamica por Demanda */
+	/* Retonar uam Lista de Array de Objetos dinamicamente */
+	List<Object[]> getListSQLDinamicaArry(String sql) throws Exception;
+
+	/* Faz um consulta dinamica por Demanda com JSF & PrimeFaces */
 	List<E> findListByQueryDinamica(String query, int inicalregistro, int maxResultado) throws Exception;
 
 	/* Buscar por ID */
-	E findById(Class<E> entidade, Long id) throws Exception;
+	Object findById(Class<E> entidade, Long id) throws Exception;
 
 	/* Query Dinamica - Consulta - HQL */
 	void executeUpdateQueryDinamica(String s) throws Exception;
