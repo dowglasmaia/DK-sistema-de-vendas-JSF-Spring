@@ -1,4 +1,4 @@
-package com.maia.impl.crud.util;
+package com.maia.impl.util;
 
 import java.io.Serializable;
 

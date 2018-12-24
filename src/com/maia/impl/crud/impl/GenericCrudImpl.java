@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.maia.impl.crud.interfac.GenericCrud;
-import com.maia.impl.crud.util.HibernateUtil;
+import com.maia.impl.util.HibernateUtil;
 
 /*
  * Usando a Injeção de Dependencia e controle de Transação do Spring
