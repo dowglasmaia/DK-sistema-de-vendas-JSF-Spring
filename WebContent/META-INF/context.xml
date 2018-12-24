@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+	
+	<Resource
+	name="jdbc/datasource" 
+	auth="Container"
+	type="javax.sql.DataSource" 	
+	defaultAutoCommit="false"
+	maxActive="50"
+	maxIdle="10"
+	maxWait="10"
+	initialSize="10"
+	validationQuery="SELECT 'OK'"
+	testWhileIdle="true"
+	testOnBorrow="true"	
+	numTestsPerEvictionRun="5" 
+	timeBetweenEvictionRunsMillis ="5000"
+	minEvictableIdleTimeMillis="60000"
+	antiJARLocking="false"
+	antiResourceLocking="false"
+	driverClassName="org.postgresql.Driver"
+	url="jdbc:postgresql://127.0.0.1:5432/vendasjsf?autoReconect=true"
+	username="postgres" 
+	password="2522" />
+	
+	<!-- POOL DE CONEXÕES -->
+	<!-- https://tomcat.apache.org/tomcat-8.0-doc/jdbc-pool.html -->
+
+</Context>
